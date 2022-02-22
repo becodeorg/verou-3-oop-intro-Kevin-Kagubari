@@ -15,3 +15,36 @@ TODO: Print the temperature on the screen.
 
 USE TYPEHINTING EVERYWHERE!
 */
+
+//TODO: Create a class beverage.
+
+
+
+class Beverage  
+{
+    public  $color;
+    public  $price;
+    public  $temperature;
+
+    public function __construct ($color, $price, $temperature="cold")
+    {
+        $this->color = $color;
+        $this->price = $price;
+        $this->temperature =$temperature;
+        
+    }
+    public function getInfo()
+    {
+         
+        echo "This beverage is {$this->temperature} and {$this->color} ! <br>";
+    }
+    
+}
+
+$cola = new Beverage ('black', 2 );
+$fanta = new Beverage ('orange', 2);
+$tea = new Beverage("green", 3, "hot");
+
+$cola -> getInfo();
+$fanta -> getInfo();
+$tea -> getInfo();
