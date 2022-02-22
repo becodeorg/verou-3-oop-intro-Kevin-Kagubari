@@ -21,3 +21,20 @@ USE TYPEHINTING EVERYWHERE!
 
 //TODO: Make class beer that extends from Beverage.
 
+require '../exercise_1_classes.php';
+require 'beer.php';
+
+class beer extends Beverage
+{
+    public $name;
+    public $alcoholpercentage;
+    
+    function __construct(string $name, float $alcoholPercentage, string $color, float $price, string $temperature = 'cold')
+    {
+        $this->name = $name;
+        $this->alcoholPercentage = $alcoholPercentage;
+        parent::__construct($color, $price, $temperature);
+    }
+
+   
+}
